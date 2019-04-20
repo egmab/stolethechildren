@@ -91,17 +91,17 @@ class Board extends Component {
     switch (this.props.char) {
       case 'burns':
           image = "./burns.png";
-          nemesis = "./smither.png";
+          nemesis = "./homer.gif";
           extrascore = 101;
           break;
       case 'voldemort':
           image = "./voldemort.jpg";
-          nemesis = "./harry.png";
+          nemesis = "./harry.gif";
           extrascore = 65;
           break;
       case 'witch':
           image = "./reine.png";
-          nemesis = "./neige.png";
+          nemesis = "./neige.gif";
           extrascore = 14;
           break;
       default:
