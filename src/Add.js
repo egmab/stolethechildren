@@ -7,7 +7,7 @@ class Add extends Component {
     }
     render() { 
         return (  
-            <p className="add1">+ {this.props.gain}</p>
+            <div className="add1">+ {this.props.gain}</div>
         );
         
     }

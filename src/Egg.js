@@ -72,7 +72,7 @@ class Egg extends Component {
         }
 
         return (
-            <div className="eggImage" onClick={() => this.props.score(eggscore, this.props.id)} >
+            <div className="eggImage" onMouseDown={() => this.props.score(eggscore, this.props.id)} >
                 <img src={image} alt={this.state.egg.name} className={this.state.rarity} />
                 <Add gain={eggscore}/>
             </div>
