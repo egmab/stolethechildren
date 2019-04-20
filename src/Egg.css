@@ -4,6 +4,8 @@
     margin-top: -20vh;
     position: relative;
     z-index: 0;
+    cursor:url("https://www.dropbox.com/s/uon9apohjts3cki/curs.png?dl=1"), pointer;
+
 }
 .eggImage img {
     width: 5vh;

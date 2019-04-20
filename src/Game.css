@@ -109,9 +109,6 @@ body{
     align-items: center;
 }
 
-.bebe, .bebe2, .bebe3, .bebe4{
-    cursor:url("https://www.dropbox.com/s/uon9apohjts3cki/curs.png?dl=1"), pointer;
-}
 
 /*.bebe, .bebe2, .bebe3, .bebe4{
     cursor:url("https://image.noelshack.com/fichiers/2019/16/5/1555667946-oeuf.png"), pointer;
@@ -126,15 +123,16 @@ body{
 .add1
 {
     position: absolute;
-    margin-top: -16vh;
-    margin-left: 8vh;
+    margin-top: -10vh;
+    margin-left: 14vh;
     transition: margin 0.1s linear;
-    opacity: 0;
-    font-size: 4vh;
+    opacity: 1;
+    font-size: 3vh;
     font-weight: bold;
 }
 
-.bebe:active > .add1, .bebe2:active > .add1, .bebe3:active > .add1, .bebe4:active > .add1
+
+.eggImage:active > .add1
 {
     opacity:1;
     margin-top: -30vh;
