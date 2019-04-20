@@ -21,8 +21,8 @@ class ModalScore extends React.Component {
     const { show } = this.state;
     return (
       <div>
-        <Modal id="modalAlerte" show={show} onHide={this.handleClose}>
-          <Modal.Header id="sasa" closeButton>
+        <Modal id="modalAlerte" show={show}>
+          <Modal.Header id="sasa" >
             <Modal.Title><p id="victory">Nice shoots ! Did you have fun ?</p></Modal.Title>
           </Modal.Header>
           <Modal.Body id="modalBody">
