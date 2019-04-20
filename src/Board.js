@@ -13,8 +13,6 @@ class Board extends Component {
     super(props)
     this.state = {
       noNemesis : true,
-      hasEgg : false,
-      gain: 0,
       score: 0,
       pointer: 0,
       pointer2: 0,
@@ -44,8 +42,6 @@ class Board extends Component {
     if (id === "egg1") {
       this.setState({
         score: this.state.score + newScore,
-        gain : newScore,
-        hasEgg : true,
         pointer: 1,
       });
       setTimeout(() => {
@@ -55,8 +51,6 @@ class Board extends Component {
     if (id === "egg2") {
       this.setState({
         score: this.state.score + newScore,
-        gain : newScore,
-        hasEgg : true,
         pointer2: 1,
       });
       setTimeout(() => {
@@ -66,8 +60,6 @@ class Board extends Component {
     if (id === "egg3") {
       this.setState({
         score: this.state.score + newScore,
-        gain : newScore,
-        hasEgg : true,
         pointer3: 1,
       });
       setTimeout(() => {
@@ -77,8 +69,6 @@ class Board extends Component {
     if (id === "egg4") {
         this.setState({
           score: this.state.score + newScore,
-          gain : newScore,
-          hasEgg : true,
           pointer4: 1,
         });
         setTimeout(() => {

@@ -1,11 +1,10 @@
 .eggImage {
-    width: 20vh;
+    width: 23vh;
     height: 20vh;
     margin-top: -20vh;
     position: relative;
     z-index: 0;
-    cursor:url("https://www.dropbox.com/s/uon9apohjts3cki/curs.png?dl=1"), pointer;
-
+    cursor:url("./assets/img/viseur.png"), pointer;
 }
 .eggImage img {
     width: 5vh;

@@ -9,6 +9,7 @@
     -moz-user-select: none; 
     -o-user-select: none; 
     user-select: none;
+    cursor:url("./assets/img/viseur2.png"), pointer;
 }
 
 
@@ -126,15 +127,12 @@ body{
     margin-top: -10vh;
     margin-left: 14vh;
     transition: margin 0.1s linear;
-    opacity: 1;
     font-size: 3vh;
     font-weight: bold;
 }
 
-
 .eggImage:active > .add1
 {
-    opacity:1;
     margin-top: -30vh;
 }
 
@@ -143,6 +141,7 @@ body{
     top: 23%;
     left: 4%;
     width: 8%;
+    cursor:url("./assets/img/viseur.png"), pointer;
 }
 .nemesis:hover{
     opacity: 0.9;
