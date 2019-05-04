@@ -13,7 +13,7 @@ class Egg extends Component {
         }
     }
     componentWillMount() {
-        axios.get(`http://easteregg.wildcodeschool.fr/api/eggs/random`)
+        axios.get(`https://easteregg.wildcodeschool.fr/api/eggs/random`)
             .then(res => {
                 const egg = res.data;
                 this.setState({ egg, });
@@ -21,7 +21,7 @@ class Egg extends Component {
     }
     componentDidMount() {
         setInterval(() => {
-            axios.get(`http://easteregg.wildcodeschool.fr/api/eggs/random`)
+            axios.get(`https://easteregg.wildcodeschool.fr/api/eggs/random`)
                 .then(res => {
                     const egg = res.data;
                     this.setState({ egg, });
