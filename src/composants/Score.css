@@ -1,13 +1,12 @@
 #ScoreTo {
     border-style: solid;
     border-color: black;
-    width: 350px;
-    height: 60px;
+    width: 60%;
     text-align: center;
     border-radius: 15px;
     background-color:black;
-    margin-left: -55.5vh;
-    margin-top: -3vh;
+    margin-left: 1%;
+    margin-top: 1%;
 }
 
 #chiffre {
@@ -18,4 +17,13 @@
 
 #yourScore {
     color: grey;
+}
+
+@media screen and (max-width: 768px) {
+    #ScoreTo {
+        width: 97%;
+    }
+    #chiffre {
+        font-size: 26px;
+    }
 }

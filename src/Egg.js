@@ -32,9 +32,11 @@ class Egg extends Component {
 
 
     render() {
+        const { id, score, sens } = this.props;
+        const { egg } = this.state;
         let eggscore;
         let image;
-        switch (this.state.egg.rarity) {
+        switch (egg.rarity) {
             case 'junk':
                 eggscore = 1;
                 image = "./junk.png";
@@ -70,11 +72,17 @@ class Egg extends Component {
             default:
                 break;
         }
+        let eggClass;
+        if (sens === "left"){
+            eggClass = "eggImagel"
+        }else{
+            eggClass = "eggImager"
+        }
 
         return (
-            <div className="eggImage" onMouseDown={() => this.props.score(eggscore, this.props.id)} >
-                <img src={image} alt={this.state.egg.name} className={this.state.rarity} />
-                <Add gain={eggscore}/>
+            <div className={eggClass} onMouseDown={() => score(eggscore, id)} >
+                <img src={image} alt={egg.name} className={egg.rarity} />
+                <Add sens={sens} gain={eggscore}/>
             </div>
         );
     }

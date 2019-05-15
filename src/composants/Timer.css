@@ -3,15 +3,19 @@
     border:3px;
     border-style: solid;
     border-color:black;
-    width:700px;
+    width:70%;
     height:30px;
-    margin-top: 2.9vh;
-    margin-left: 20vh;
     display: inline-flex;
     border-radius: 10px;
+    margin-left: 1%;
 
 }
 
 .jauge {
     border-radius: 7px;
+}
+@media screen and (max-width: 768px) {
+    .barre {
+        width: 97%;
+    }
 }
