@@ -14,89 +14,86 @@
 
 
 body{
-	width: 98.9vw;
-	height: 40vw;
-	background: fixed, fixed, url("./assets/img/background.png") no-repeat scroll top center, black;
-	background-size: cover;
+    width: 100vw;
+    height: 100%;
+    background: fixed, url("./assets/img/background.png") no-repeat fixed 50%;
+    background-position: bottom;
+    background-size: 100%, cover;
 	color: black;
     font-family: 'Khand', sans-serif;
     overflow: hidden;
 }
 
-.bebe{
+.babyRow {
+    margin-top: 1%;
+}
+
+.bebe1{
+    animation: walk 8s linear infinite;
+}
+
+.bebe2{
     animation: walk 7s linear infinite;
-    position: absolute;
+}
+
+.bebe3{
+    animation: walk 6s linear infinite;
+}
+
+.bebe1 img, .bebe2 img, .bebe3 img {
+    width: 11em;
 }
 
 @keyframes walk
 {
-    0%
-    {
-        margin: 30vh 0 0 199vh;
-    }
-    100%
-    {
-       margin: 30vh 0 0 -20vw;
-    }
+    0% 	{ animation-timing-function: linear; transform: translateX(110vw); }
+    100% { animation-timing-function: linear; transform: translateX(-35vw); }
 }
 
-.bebe2{
-    animation: walk2 8s linear infinite;  
-    position: absolute; 
+.bebel1{
+    animation: walk2 7s linear infinite;
+    position: absolute;
+    left: 0;
+}
+.bebel2{
+    animation: walk2 8s linear infinite;
+    position: absolute;
+    left: 0;
+}
+.bebel3{
+    animation: walk2 6s linear infinite;
+    position: absolute;
+    left: 0;
+}
+.bebel1 img, .bebel2 img, .bebel3 img{
+    transform: scaleX(-1);
+    width: 11em;
 }
 
 @keyframes walk2
 {
-    0%
-    {
-        margin: 40vh 0 0 199vh;
-    }
-    100%
-    {
-        margin: 40vh 0 0 -20vw;
-    }
+    0% { animation-timing-function: linear; transform: translateX(-10vw); }
+    100% { animation-timing-function: linear; transform: translateX(110vw); }
 }
 
-.bebe3{
-    animation: walk3 6s linear infinite;   
-    position: absolute; 
-}
-
-@keyframes walk3
-{
-    0%
-    {
-        margin: 50vh 0 0 199vh;
-    }
-    100%
-    {
-       margin: 50vh 0 0 -20vw;
-    }
-}
-
-.bebe4{
-    animation: walk4 10s ease infinite;   
-    position: absolute; 
-}
-
-@keyframes walk4
-{
-    0%
-    {
-        margin: 58vh 0 0 199vh;
-    }
-    100%
-    {
-       margin: 58vh 0 0 -20vw;
-    }
+.barreScore{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5%;
+    width: 100%;
 }
 .char{
-    margin-left: -26vh;
-    margin-top: -6vh;
+    margin-top: 0.5%;
     width: 17.5vh;
     height: 17.5vh;
     border-radius: 50%;
     border: solid 3px black;
+}
+
+#timerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
 #timereteggs {
@@ -106,8 +103,7 @@ body{
 
 #scoreC {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin-left: 2%;
 }
 
 
@@ -121,27 +117,38 @@ body{
 }
 */
 
-.add1
+.add1, .add2
 {
     position: absolute;
     margin-top: -10vh;
-    margin-left: 14vh;
     transition: margin 0.1s linear;
     font-size: 3vh;
     font-weight: bold;
 }
+.add1
+{
+    margin-left: 2vh;
+}
+.add2
+{
+    margin-left: 14vh;
+}
 
-.eggImage:active > .add1
+.eggImagel:active > .add1
+{
+    margin-top: -30vh;
+}
+
+.eggImager:active > .add2
 {
     margin-top: -30vh;
 }
 
 .nemesis{
-    position: absolute;
-    top: 40%;
-    left: 4%;
+    margin-left: 4%;
     width: 8%;
     cursor:url("./assets/img/viseur.png"), pointer;
+    height: 20vh;
 }
 .nemesis:hover{
     opacity: 0.9;
@@ -149,4 +156,55 @@ body{
 .nemesis img{
     width : 100%;
 }
+.noNemesis {
+    height: 20vh;
+}
 
+@media screen and (max-width: 768px) {
+  .bebe1 img, .bebe2 img, .bebe3 img, .bebel1 img, .bebel2 img, .bebel3 img {
+    width: 7em;
+  }
+  .bebe1{
+    animation: walk 3s linear infinite;
+}
+
+.bebe2{
+    animation: walk 4s linear infinite;
+}
+
+.bebe3{
+    animation: walk 5s linear infinite;
+}
+
+.bebel1{
+    animation: walk2 3s linear infinite;
+    position: absolute;
+    left: 0;
+}
+.bebel2{
+    animation: walk2 4s linear infinite;
+    position: absolute;
+    left: 0;
+}
+.bebel3{
+    animation: walk2 5s linear infinite;
+    position: absolute;
+    left: 0;
+}
+
+  .babyRow {
+    margin-top: 0;
+}
+.nemesis{
+    width: 26%;
+    cursor:url("./assets/img/viseur.png"), pointer;
+}
+#timereteggs {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#timerContainer {
+    width: 100%;
+}
+}

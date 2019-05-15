@@ -37,8 +37,8 @@ class ModalScore extends React.Component {
           <NavLink to='./'>
             <Button className="buttonModalScore" onClick={this.handleClose}>
               Home
-              </Button>
-              </NavLink>
+            </Button>
+          </NavLink>
           </Modal.Footer>
         </Modal>
       </div>

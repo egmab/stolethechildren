@@ -6,8 +6,15 @@ class Add extends Component {
         this.state = {  }
     }
     render() { 
+        const { gain, sens } = this.props;
+        let addClass;
+        if (sens === "left"){
+            addClass="add1"
+        }else{
+            addClass="add2"
+        }
         return (  
-            <div className="add1">+ {this.props.gain}</div>
+            <div className={addClass}>+ {gain}</div>
         );
         
     }

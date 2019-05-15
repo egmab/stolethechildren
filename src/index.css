@@ -8,6 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: black;
 }
+html{
+  overflow: hidden;
+  height: 100%;
+}
 
 code {
   font-family: 'Raleway', sans-serif;
