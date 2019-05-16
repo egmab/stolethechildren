@@ -43,11 +43,11 @@
         align-items: center;
     }
     .imgcharac{
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
     .charaname{
-        font-size: 1.8em;
+        font-size: 1.3em;
         margin-bottom: 4px;
         margin-top: 7px;
     }
