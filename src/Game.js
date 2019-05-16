@@ -11,8 +11,12 @@ class Game extends Component {
     }
    
     render() {
-        let image=this.props.location.state.char;
-       
+        let image;
+        if (this.props.location.state){
+            image=this.props.location.state.char;
+        }else{
+            image="burns"
+        }
         return (
             <div className="game">
                 <Board char={image}/>
