@@ -1,31 +1,23 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './Egg.css';
 import Add from './Add';
 
 
-
+let egg;
 class Egg extends Component {
     constructor(props) {
         super(props);
+        this.rarityTab = ['junk', 'basic', 'fine', 'ascended', 'exotic', 'rare', 'masterwork', 'legendary']
+        egg = this.rarityTab[Math.floor(Math.random()*this.rarityTab.length)];
         this.state = {
-            egg: "",
+            egg,
         }
     }
-    componentWillMount() {
-        axios.get(`https://easteregg.wildcodeschool.fr/api/eggs/random`)
-            .then(res => {
-                const egg = res.data;
-                this.setState({ egg, });
-            })
-    }
+
     componentDidMount() {
         setInterval(() => {
-            axios.get(`https://easteregg.wildcodeschool.fr/api/eggs/random`)
-                .then(res => {
-                    const egg = res.data;
-                    this.setState({ egg, });
-                })
+            egg = this.rarityTab[Math.floor(Math.random()*this.rarityTab.length)];
+                this.setState({ egg, });
         }, 6009);
 
     }
@@ -36,7 +28,7 @@ class Egg extends Component {
         const { egg } = this.state;
         let eggscore;
         let image;
-        switch (egg.rarity) {
+        switch (egg) {
             case 'junk':
                 eggscore = 1;
                 image = "./junk.png";
@@ -81,7 +73,7 @@ class Egg extends Component {
 
         return (
             <div className={eggClass} onMouseDown={() => score(eggscore, id)} >
-                <img src={image} alt={egg.name} className={egg.rarity} />
+                <img src={image} alt={egg} className={egg} />
                 <Add sens={sens} gain={eggscore}/>
             </div>
         );
