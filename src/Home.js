@@ -18,7 +18,6 @@ class Home extends Component {
                     </div>
                 </div>
                 <Character/>
-                {/*<ButtonPlayHome />*/}
             </div>
         );
     }
